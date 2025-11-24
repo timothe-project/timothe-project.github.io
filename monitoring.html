@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIMOTHE - Solution de Monitoring Open Source</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .bg-timothe-primary { background-color: #8B2E33; }
+        .text-timothe-primary { color: #8B2E33; }
+        .bg-timothe-dark { background-color: #1a1a1a; }
+        
+        /* Animation pour le flux de données dans le schéma */
+        @keyframes dash {
+            to { stroke-dashoffset: 0; }
+        }
+        .data-flow {
+            stroke-dasharray: 10;
+            stroke-dashoffset: 100;
+            animation: dash 2s linear infinite;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full z-50 bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center gap-2 hover:opacity-80 transition">
+                        <i class="fas fa-arrow-left text-timothe-primary"></i>
+                        <span class="text-xl font-bold text-gray-900">TIMOTHE <span class="text-sm font-normal text-gray-500">| Monitoring</span></span>
+                    </a>
+                </div>
+                <div class="flex items-center space-x-6">
+                    <a href="https://github.com/barais" target="_blank" class="text-gray-600 hover:text-black transition">
+                        <i class="fab fa-github fa-lg"></i>
+                    </a>
+                    <a href="index.html#contact" class="px-4 py-2 bg-timothe-primary text-white rounded hover:bg-red-800 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER SECTION -->
+    <section class="bg-timothe-dark text-white pt-32 pb-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="inline-block p-3 rounded-full bg-blue-900 bg-opacity-30 mb-4 border border-blue-500">
+                <i class="fas fa-network-wired text-blue-400"></i> Architecture IoT
+            </div>
+            <h1 class="text-3xl md:text-5xl font-bold mb-6">
+                Une solution de monitoring <span class="text-blue-400">Open Source</span> & Sécurisée
+            </h1>
+            <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+                Pour garantir la pérennité et l'évolutivité du suivi de performance dans un paysage technologique morcelé, TIMOTHE fait le choix de l'ouverture et de la standardisation.
+            </p>
+        </div>
+    </section>
+
+    <!-- PHILOSOPHIE OPEN SOURCE -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-2xl font-bold text-gray-900 mb-6 border-l-4 border-timothe-primary pl-4">
+                        Pourquoi l'Open Source ?
+                    </h2>
+                    <div class="space-y-6 text-gray-600">
+                        <p>
+                            Le marché du solaire thermique souffre d'un morcellement des protocoles propriétaires. Les solutions "fermeés" rendent la maintenance coûteuse et créent une dépendance forte envers les fabricants.
+                        </p>
+                        <p>
+                            <strong>Notre approche garantit :</strong>
+                        </p>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-wrench text-timothe-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold text-gray-800">Maintenabilité :</span>
+                                    Le code est accessible, documenté et modifiable par n'importe quel technicien compétent, aujourd'hui comme dans 10 ans.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-expand-arrows-alt text-timothe-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold text-gray-800">Évolutivité :</span>
+                                    L'architecture modulaire permet d'ajouter de nouveaux capteurs ou de changer de protocole sans remplacer tout le matériel.
+                                </div>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-shield-alt text-timothe-primary mt-1 mr-3"></i>
+                                <div>
+                                    <span class="font-bold text-gray-800">Indépendance :</span>
+                                    Le maître d'ouvrage reste propriétaire de ses données et de son infrastructure de suivi.
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
+                    <h3 class="font-bold text-gray-800 mb-4">Le Stack Technique</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white p-4 rounded shadow-sm text-center">
+                            <i class="fas fa-microchip text-3xl text-gray-700 mb-2"></i>
+                            <div class="font-bold">ESP32</div>
+                            <div class="text-xs text-gray-500">Hardware</div>
+                        </div>
+                        <div class="bg-white p-4 rounded shadow-sm text-center">
+                            <i class="fab fa-usb text-3xl text-green-600 mb-2"></i>
+                            <div class="font-bold">ESPHome</div>
+                            <div class="text-xs text-gray-500">Firmware</div>
+                        </div>
+                        <div class="bg-white p-4 rounded shadow-sm text-center">
+                            <i class="fas fa-database text-3xl text-blue-600 mb-2"></i>
+                            <div class="font-bold">TimescaleDB</div>
+                            <div class="text-xs text-gray-500">Storage</div>
+                        </div>
+                        <div class="bg-white p-4 rounded shadow-sm text-center">
+                            <i class="fas fa-chart-area text-3xl text-orange-500 mb-2"></i>
+                            <div class="font-bold">Grafana</div>
+                            <div class="text-xs text-gray-500">Visualisation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCHEMA ARCHITECTURE -->
+    <section class="py-16 bg-gray-50 border-y border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12">Architecture du Système</h2>
+            
+            <!-- SVG Diagram Container -->
+            <div class="w-full overflow-x-auto bg-white rounded-xl shadow-lg p-4 md:p-8">
+                <svg viewBox="0 0 1000 450" class="w-full h-auto min-w-[800px]" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Definitions for gradients and markers -->
+                    <defs>
+                        <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+                            <path d="M0,0 L0,6 L9,3 z" fill="#9ca3af" />
+                        </marker>
+                        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#f3f4f6;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#ffffff;stop-opacity:1" />
+                        </linearGradient>
+                    </defs>
+
+                    <!-- ZONE 1: INSTALLATION SOLAIRE (Local Technique) -->
+                    <rect x="20" y="50" width="280" height="350" rx="10" fill="#f8fafc" stroke="#e2e8f0" stroke-width="2" />
+                    <text x="40" y="80" font-family="sans-serif" font-weight="bold" fill="#475569">LOCAL TECHNIQUE</text>
+                    
+                    <!-- Régulateur Solaire -->
+                    <rect x="50" y="150" width="120" height="150" rx="5" fill="#334155" />
+                    <text x="110" y="190" text-anchor="middle" fill="white" font-family="sans-serif" font-size="12">Régulateur</text>
+                    <text x="110" y="210" text-anchor="middle" fill="#94a3b8" font-family="sans-serif" font-size="10">RESOL / Tech.</text>
+                    <!-- Port VBUS -->
+                    <circle cx="170" cy="225" r="5" fill="#ef4444" />
+                    <text x="185" y="230" fill="#ef4444" font-size="10" font-weight="bold">VBUS</text>
+
+                    <!-- ZONE 2: GATEWAY SECURISEE (Edge) -->
+                    <rect x="350" y="130" width="220" height="190" rx="10" fill="white" stroke="#3b82f6" stroke-width="2" stroke-dasharray="5,5" />
+                    <text x="460" y="120" text-anchor="middle" font-family="sans-serif" font-weight="bold" fill="#3b82f6">GATEWAY SÉCURISÉE</text>
+                    
+                    <!-- Optocoupleur -->
+                    <rect x="370" y="180" width="60" height="90" rx="4" fill="#fef3c7" stroke="#d97706" />
+                    <text x="400" y="215" text-anchor="middle" font-size="10" fill="#92400e">Opto</text>
+                    <text x="400" y="235" text-anchor="middle" font-size="9" fill="#92400e">ISOLATION</text>
+                    
+                    <!-- ESP32 -->
+                    <rect x="460" y="180" width="90" height="90" rx="4" fill="#1e293b" />
+                    <text x="505" y="215" text-anchor="middle" fill="white" font-weight="bold">ESP32</text>
+                    <text x="505" y="235" text-anchor="middle" fill="#cbd5e1" font-size="10">ESPHome</text>
+
+                    <!-- Connection Regulator -> Opto -->
+                    <path d="M170 225 L370 225" stroke="#ef4444" stroke-width="2" />
+                    
+                    <!-- Connection Opto -> ESP32 -->
+                    <path d="M430 225 L460 225" stroke="#334155" stroke-width="2" />
+
+                    <!-- Lock Icon for Security -->
+                    <circle cx="430" cy="180" r="15" fill="#22c55e" />
+                    <text x="430" y="185" text-anchor="middle" fill="white" font-family="FontAwesome" font-size="14"></text>
+
+                    <!-- ZONE 3: CLOUD / SERVEUR -->
+                    <rect x="700" y="50" width="280" height="350" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="2" />
+                    <text x="720" y="80" font-family="sans-serif" font-weight="bold" fill="#0369a1">SERVEUR CENTRAL</text>
+
+                    <!-- MQTT Broker -->
+                    <rect x="730" y="120" width="220" height="50" rx="5" fill="#fff" stroke="#cbd5e1" />
+                    <text x="840" y="150" text-anchor="middle" fill="#334155" font-weight="bold">MQTT Broker</text>
+
+                    <!-- Database -->
+                    <rect x="730" y="190" width="220" height="50" rx="5" fill="#fff" stroke="#cbd5e1" />
+                    <text x="840" y="220" text-anchor="middle" fill="#334155" font-weight="bold">TimescaleDB</text>
+
+                    <!-- Grafana -->
+                    <rect x="730" y="280" width="220" height="80" rx="5" fill="#ea580c" />
+                    <text x="840" y="325" text-anchor="middle" fill="white" font-weight="bold" font-size="18">Grafana</text>
+
+                    <!-- Connection ESP32 -> Cloud (WiFi/MQTT) -->
+                    <path class="data-flow" d="M550 225 L640 225 L640 145 L730 145" stroke="#3b82f6" stroke-width="3" fill="none" />
+                    <text x="640" y="200" text-anchor="middle" fill="#3b82f6" font-size="11" font-weight="bold">WiFi / MQTT (TLS)</text>
+
+                    <!-- Internal Cloud Connections -->
+                    <line x1="840" y1="170" x2="840" y2="190" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)" />
+                    <line x1="840" y1="240" x2="840" y2="280" stroke="#94a3b8" stroke-width="2" marker-end="url(#arrow)" />
+
+                    <!-- Fleet Management Note -->
+                    <text x="840" y="420" text-anchor="middle" font-size="11" fill="#64748b" style="font-style: italic;">Déploiement via Infrastructure as Code</text>
+                </svg>
+            </div>
+            <p class="text-center text-sm text-gray-500 mt-4">Schéma logique de la solution : du capteur terrain à la visualisation cloud.</p>
+        </div>
+    </section>
+
+    <!-- DETAILS TECHNIQUES -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 gap-8">
+                
+                <!-- Bloc Matériel -->
+                <div class="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition group">
+                    <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mb-4 text-timothe-primary group-hover:bg-timothe-primary group-hover:text-white transition">
+                        <i class="fas fa-microchip text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hardware Sécurisé</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Utilisation de microcontrôleurs <strong>ESP32</strong> couplés à un <strong>octocoupleur</strong>.
+                    </p>
+                    <ul class="text-sm text-gray-500 list-disc list-inside space-y-2">
+                        <li>Faible coût et disponibilité mondiale.</li>
+                        <li><strong>Isolation galvanique :</strong> L'octocoupleur protège physiquement l'installation solaire contre les surtensions ou les tentatives de cyber-attaques venant du réseau informatique.</li>
+                    </ul>
+                </div>
+
+                <!-- Bloc Logiciel Embarqué -->
+                <div class="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition group">
+                    <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-4 text-green-600 group-hover:bg-green-600 group-hover:text-white transition">
+                        <i class="fas fa-code text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">ESPHome & Protocoles</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Construction du firmware via <strong>ESPHome</strong> (basé sur YAML), facilitant la maintenance sans expertise C++ poussée.
+                    </p>
+                    <ul class="text-sm text-gray-500 list-disc list-inside space-y-2">
+                        <li>Support natif des protocoles <strong>VBUS</strong> (Resol) et DL-BUS.</li>
+                        <li>Génération automatique de firmware dédié par installation.</li>
+                        <li>Mises à jour <strong>OTA</strong> (Over-The-Air) pour la gestion de parc.</li>
+                    </ul>
+                </div>
+
+                <!-- Bloc Infrastructure -->
+                <div class="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition group">
+                    <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mb-4 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition">
+                        <i class="fas fa-server text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Infrastructure as Code</h3>
+                    <p class="text-gray-600 text-sm mb-4">
+                        Déploiement serveur automatisé et réplicable "clé en main".
+                    </p>
+                    <ul class="text-sm text-gray-500 list-disc list-inside space-y-2">
+                        <li>Scripts de déploiement fournis (Docker/Ansible).</li>
+                        <li>Stack performante : <strong>MQTT</strong> (transport), <strong>TimescaleDB</strong> (Time-series SQL), <strong>Grafana</strong> (Dashboards).</li>
+                        <li>Gestion centralisée de la flotte de capteurs.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- REPOSITORIES & RESSOURCES -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-2xl font-bold mb-8 text-center">Accéder aux Ressources (GitHub)</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                
+                <a href="https://github.com/barais/esphomesolarthermalpanel" target="_blank" class="block bg-gray-800 p-6 rounded hover:bg-gray-700 transition border border-gray-700 hover:border-timothe-primary group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fab fa-github text-2xl"></i>
+                        <i class="fas fa-external-link-alt text-gray-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">esphomesolarthermalpanel</h3>
+                    <p class="text-gray-400 text-sm">Configuration ESPHome et schémas hardware pour la connexion aux panneaux solaires.</p>
+                </a>
+
+                <a href="https://github.com/barais/rmqttconnector" target="_blank" class="block bg-gray-800 p-6 rounded hover:bg-gray-700 transition border border-gray-700 hover:border-timothe-primary group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fab fa-github text-2xl"></i>
+                        <i class="fas fa-external-link-alt text-gray-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">rmqttconnector</h3>
+                    <p class="text-gray-400 text-sm">Connecteur logiciel pour interfacer les données MQTT avec la base de données.</p>
+                </a>
+
+                <a href="https://github.com/barais/solar_thermal_mqtt_sim" target="_blank" class="block bg-gray-800 p-6 rounded hover:bg-gray-700 transition border border-gray-700 hover:border-timothe-primary group">
+                    <div class="flex items-center justify-between mb-4">
+                        <i class="fab fa-github text-2xl"></i>
+                        <i class="fas fa-external-link-alt text-gray-500 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="font-bold text-lg mb-2">solar_thermal_mqtt_sim</h3>
+                    <p class="text-gray-400 text-sm">Outils de simulation pour tester l'infrastructure sans matériel physique.</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER SIMPLE -->
+    <footer class="bg-black text-white py-8 text-center border-t border-gray-800">
+        <p class="text-sm text-gray-500">Projet TIMOTHE - <a href="index.html" class="underline hover:text-white">Retour à l'accueil</a></p>
+    </footer>
+
+</body>
+</html>
